@@ -1,0 +1,25 @@
+From 0097b2f020e93da910a49f50b3fc031dd3ff697b Mon Sep 17 00:00:00 2001
+From: Luca Miccio <lucmiccio@gmail.com>
+Date: Thu, 9 Dec 2021 09:53:10 +0100
+Subject: [PATCH] Patch esame
+
+Signed-off-by: Luca Miccio <lucmiccio@gmail.com>
+---
+ arch/arm64/mm/init.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/arch/arm64/mm/init.c b/arch/arm64/mm/init.c
+index 0ad4afc9359b..28558e93f7b2 100644
+--- a/arch/arm64/mm/init.c
++++ b/arch/arm64/mm/init.c
+@@ -279,6 +279,7 @@ static int __init early_mem(char *p)
+ 		return 1;
+ 
+ 	memory_limit = memparse(p, &p) & PAGE_MASK;
++	pr_notice("Level 1 of RTES project\n");
+ 	pr_notice("Memory limited to %lldMB\n", memory_limit >> 20);
+ 
+ 	return 0;
+-- 
+2.17.1
+

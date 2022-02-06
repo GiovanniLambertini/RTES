@@ -16,7 +16,7 @@ index 0ad4afc9359b..28558e93f7b2 100644
  		return 1;
  
  	memory_limit = memparse(p, &p) & PAGE_MASK;
-+	pr_notice("Level 1 of RTES project\n");
++	pr_notice("Level 1 of RTES projectaaa\n");
  	pr_notice("Memory limited to %lldMB\n", memory_limit >> 20);
  
  	return 0;
